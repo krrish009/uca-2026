@@ -10,7 +10,7 @@ public class datastream {
         upperHalf = new PriorityQueue<>();
     }
     
-    public void insert(int num) {
+    public void addNum(int num) {
         lowerHalf.add(num);
         upperHalf.add(lowerHalf.poll());
         if (lowerHalf.size() < upperHalf.size()) {
