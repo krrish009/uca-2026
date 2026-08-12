@@ -1,9 +1,9 @@
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Heap {
     
-    public void sort(int[] arr) {
+    public static void sort(int[] arr) {
         int n = arr.length;
         for (int i = n / 2 - 1; i >= 0; i--) {
             heapify(i, n, arr);
@@ -18,7 +18,7 @@ public class Heap {
         }
     }
 
-    private void heapify(int i, int n, int[] arr) {
+    private static void heapify(int i, int n, int[] arr) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
@@ -41,11 +41,14 @@ public class Heap {
     }
 
     public static void main(String[] args) {
-        Heap hs = new Heap();
-        int[] data = {12, 11, 13, 5, 6, 7};
-        
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int[] data=new int[size]
+        for(int i=0;i<size;i++) {
+            data[i]=sc.nextInt();
+        }
         System.out.println("Original Array: " + Arrays.toString(data));
-        hs.sort(data);
+        sort(data);
         System.out.println("Sorted Array:   " + Arrays.toString(data));
     }
 }
