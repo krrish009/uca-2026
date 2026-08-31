@@ -3,7 +3,7 @@ import java.util.List;
 
 public class CountSmallerAfterSelf {
 
-    private static class Node {
+    private static class Node  {
         int val;
         int id;
         Node(int val, int id) {
